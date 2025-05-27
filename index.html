@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadia Medical Fundraiser</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for Inter font and general aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem 1rem; /* Add some padding for smaller screens */
+            overflow-x: hidden; /* Prevent horizontal scroll during animation */
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 2.5rem; /* Increased padding */
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
+            max-width: 64rem; /* Wider container for two columns */
+            width: 100%;
+            border: 1px solid #e2e8f0; /* Subtle border */
+            display: flex; /* Enable flexbox for columns */
+            flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+            gap: 2rem; /* Space between columns */
+            align-items: center; /* Vertically align items in the center */
+        }
+
+        /* Styles for the text content column */
+        .text-column {
+            flex: 1; /* Allow text column to grow */
+            min-width: 300px; /* Minimum width before wrapping */
+            text-align: left; /* Align text to the left */
+        }
+
+        /* Styles for the image column */
+        .image-column {
+            flex: 1; /* Allow image column to grow */
+            min-width: 300px; /* Minimum width before wrapping */
+            display: flex; /* Use flexbox to center image within its column */
+            justify-content: center; /* Center image horizontally */
+            align-items: center; /* Center image vertically */
+        }
+
+        /* Styles for the fly-in image */
+        .fly-in-image {
+            display: block; /* Ensures it takes up its own line */
+            max-width: 100%; /* Responsive image within its column */
+            height: auto;
+            border-radius: 1rem; /* Rounded corners for the image */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+            transform: translateY(100px); /* Start off-screen below */
+            opacity: 0; /* Start invisible */
+            animation: flyIn 1.2s ease-out forwards; /* Apply the animation */
+            animation-delay: 0.5s; /* Delay the animation slightly */
+        }
+
+        @keyframes flyIn {
+            from {
+                transform: translateY(100px); /* Start 100px below its final position */
+                opacity: 0; /* Start completely transparent */
+            }
+            to {
+                transform: translateY(0); /* End at its natural position */
+                opacity: 1; /* End fully opaque */
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+                flex-direction: column; /* Stack columns vertically on smaller screens */
+                gap: 1.5rem;
+            }
+            .text-column, .image-column {
+                min-width: unset; /* Remove min-width to allow full width */
+                width: 100%; /* Take full width */
+            }
+            .text-column {
+                order: 2; /* Put text below image on small screens */
+                text-align: center; /* Center text on small screens */
+            }
+            .image-column {
+                order: 1; /* Put image above text on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-column">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+                Sadia Medical Fundraiser!
+            </h1>
+            <p class="text-lg text-gray-700 mb-6">
+                <b>Sadia Faisal is in need of urgent medical treatment </b> for a back problem due to giving birth to her second child. 
+				She is under the care of Dr. Fazal (Neurospine) and other multidisciplinary teams at the Aga Khan University Hospital. 
+				An estimate of <b>Ug shs. 45,000,000/= </b>(Forty-five million Uganda Shillings) is needed and payable to the hospital account.
+            </p>
+            <p class="text-md text-gray-600">
+                This is to request your kind assitance towards this call and help Sadia to the recovery road. Your donation is highly apreciated
+            </p>
+		
+		<div class="text-column">
+			<p class="text-lg text-gray-700 mb-6">
+				Your Donation Counts! 0784698993 (KALEMA GEORGE), 0774443283 (OBONYO RICHARD)
+			<div class="image-column">
+				<img src="images/donation.jpg" alt="Vibrant Kampala" class="fly-in-image" style= "max-width: 90px; max-height:90px; margin: 10px;">
+				<img src="images/momo.png" alt="Vibrant Kampala" class="fly-in-image" style= "max-width: 90px; max-height: 100px; margin: 10px;">
+				<img src="images/airtel.jpg" alt="Vibrant Kampala" class="fly-in-image" style= "max-width: 90px; max-height: 90px; margin: 10px;">
+			</P>
+			</div>
+		</div>			
+		</div>
+        <div class="image-column">
+            <img src="images/profile1.jpg" alt="Vibrant Kampala" class="fly-in-image" style= "width:500px; height:500px; margin: 10px;">
+			<img src="images/profile2.jpg" alt="Vibrant Kampala" class="fly-in-image" style= "width:500px; height:500px; margin: 10px;">
+        </div>
+    </div>
+</body>
+</html>
